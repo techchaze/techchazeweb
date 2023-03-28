@@ -1,35 +1,39 @@
 import { Box, Flex, Image, Text, Img, Button } from "@chakra-ui/react";
 import React from "react";
 
-const Home = () => {
+const About = () => {
   return (
     <>
       {/* main container */}
       <Flex
-        className="home_container"
+        className="about_container"
         w="100%"
         h={["100vh", "100vh", "100vh", "100vh"]}
         bgColor="black"
         justifyContent="center"
         alignItems="center"
-        position="relative"
         py="50px"
       >
         <Flex
-          width={["100%", "100%", "90%", "72%"]}
-          height={["100vh", "100vh", "970px", "970px"]}
-          mt={["80px", "90px", "0px", "0px"]}
-          pt={["0px", "0px", "157px", "157px"]}
-          flexDirection={["column-reverse", "column-reverse", "row", "row"]}
+          width={["100%", "100%", "90%", "90%"]}
+          height="100%"
+          flexDirection={["column", "column", "row", "row"]}
+          alignItems="center"
+
         >
           {/* left container */}
+         
+          <Flex width={["90%", "90%", "50%", "50%"]} height="50%" justifyContent="center">
+            <Image
+              src="images/aboutpik.png"
+              alt="homepik"
+            />
+          </Flex>
           <Flex
-            width={["80%", "80%", "50%", "50%"]}
+            width={["80%", "80%", "40%", "40%"]}
             flexDirection="column"
             gap={["20px", "20px", "43px", "43px"]}
-            pt={["0px", "0px", "130px", "130px"]}
             textAlign={["center", "center", "start", "start"]}
-            mt="-50px"
             margin="auto"
           >
             <Text
@@ -39,29 +43,41 @@ const Home = () => {
               fontFamily="Poppins"
               color="#AD1987"
             >
-              Welcome to creatic
+              ABOUT US
             </Text>
+            <Flex flexDirection="column">
             <Text
-              fontSize={["34px", "34px", "70px", "70px"]}
+              fontSize={["25px", "25px", "50px", "50px"]}
               color="#FFFFFF"
-              lineHeight="109%"
+              lineHeight="54px"
               fontFamily="Orbitron"
               fontWeight="700"
               textAlign={["center", "center", "start", "start"]}
             >
-              WE ARE{" "}
-              <Text as="span" color="#AD1987">
-                CREATIVE
-              </Text>{" "}
-              DESIGN AGENCY
+              WE BRING           <Text as="span" color="#AD1987">
+              CREATIVE IDEAS
+              </Text>
+              
+              &nbsp; TO LIFE.
             </Text>
+
+            <Text
+              fontSize={["10px", "10px", "21px", "21px"]}
+              fontWeight="500"
+              lineHeight="15px"
+              fontFamily="Poppins"
+              color="#AD1987"
+            >
+              We love Creating
+            </Text>
+            </Flex>
             <Box
               width="144px"
               border={[
-                "1.5px solid #AD1987",
-                "2px solid #AD1987",
-                "3px solid #AD1987",
-                "3px solid #AD1987",
+                "1.5px solid white",
+                "2px solid white",
+                "3px solid white",
+                "3px solid white",
               ]}
               alignSelf={["center", "center", "start", "start"]}
             ></Box>
@@ -81,28 +97,21 @@ const Home = () => {
               fontFamily="Poppins"
               fontSize="17px"
               lineHeight="26px"
+              fontWeight="400"
               px="25px"
               py="10px"
               bgColor="transparent"
-              fontWeight="400"
               color="white"
               width={["256px", "256px", "175px", "175px"]}
               alignSelf={["center", "center", "start", "start"]}
-              mb="20px"
+            //   mb="20px"
               _hover={{
                 bgColor: "transparent",
                 color: "green",
               }}
             >
-              GET IN TOUCH
+              READ MORE
             </Button>
-          </Flex>
-          <Flex width={["100%", "100%", "50%", "50%"]} justifyContent="center">
-            <Image
-              src="images/homepik.png"
-              alt="homepik"
-              width={["328px", "328px", "655px", "655px"]}
-            />
           </Flex>
         </Flex>
       </Flex>
@@ -110,4 +119,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

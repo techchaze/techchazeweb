@@ -24,35 +24,27 @@ const Navbar = () => {
       {/* main container */}
       <Box position="absolute" left="0" top="0" w="100%" h="150px">
         <Flex
-          justifyContent={["space-between", "space-between", "start", "start"]}
           alignItems="center"
-          position="absolute"
           w="100%"
-          pt="30px"
-          gap={["0px", "0px", "432px", "432px"]}
+          pt={["10px","10px","30px","30px"]}
         >
-          <Box ml={["20px", "50px", "251px", "251px"]}>
+          <Flex justifyContent={["start","start","center","center"]}  width={["90%","90%","30%","30%"]}>
             <Image
               src="images/navlogo.png"
               alt="LOGO"
-              width={["100px", "60px", "118px", "118px"]}
-              height={["100px", "46px", "92px", "92px"]}
-              h="100%"
+              width={["100px", "100px", "118px", "118px"]}
+              height={["100px", "100px", "100px", "100px"]}
             />
-          </Box>
-
+          </Flex>
+<Flex width="14%" display={["none","none","none","flex"]}></Flex>
           {/* Navbar container desktop */}
           <Flex
-            flexDirection=""
             justifyContent="end"
             gap="2"
-            pr="6"
-            // ml={["400px","400px","432px","432px"]}
             display={["none", "none", "flex", "flex"]}
-            position="relative"
           >
             <Button
-              fontSize="21px"
+              fontSize={["0","0","18px","21px"]}
               color="#FFFFFF"
               bgColor="transparent"
               fontWeight="500"
@@ -68,7 +60,7 @@ const Navbar = () => {
               Home
             </Button>
             <Button
-              fontSize="21px"
+              fontSize={["0","0","18px","21px"]}
               color="#FFFFFF"
               bgColor="transparent"
               fontWeight="500"
@@ -79,11 +71,12 @@ const Navbar = () => {
                 bgColor:"transparent",
                 color:"red"
              }}
+
             >
               About Us
             </Button>
             <Button
-              fontSize="21px"
+              fontSize={["0","0","18px","21px"]}
               color="#FFFFFF"
               bgColor="transparent"
               fontWeight="500"
@@ -98,7 +91,7 @@ const Navbar = () => {
               Service
             </Button>
             <Button
-              fontSize="21px"
+              fontSize={["0","0","18px","21px"]}
               color="#FFFFFF"
               bgColor="transparent"
               fontWeight="500"
@@ -113,7 +106,7 @@ const Navbar = () => {
               Portfolio
             </Button>
             <Button
-              fontSize="21px"
+              fontSize={["0","0","18px","21px"]}
               color="#FFFFFF"
               bgColor="transparent"
               fontWeight="500"
@@ -127,6 +120,8 @@ const Navbar = () => {
             >
               Contact Us
             </Button>
+
+            {/* dark mode button */}
             <Flex display={["none", "none", "flex", "flex"]} ml="17px">
             <svg width="100" height="40" viewBox="0 0 100 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="100" height="52" rx="26" fill="#AD1987"/>
@@ -137,6 +132,7 @@ const Navbar = () => {
           </Flex>
           </Flex>
 
+          {/* mobile dark mode */}
           <Box mr="20px" display={["flex", "flex", "none", "none"]}>
             <svg
               width="50"
@@ -155,19 +151,8 @@ const Navbar = () => {
               />
             </svg>
           </Box>
-
-          {/* <IconButton
-            ref={btnRef}
-            colorScheme="teal"
-            onClick={onOpen}
-            aria-label="Search database"
-            // icon={<HamburgerIcon />}
-            bgColor="red"
-            display={["flex", "flex", "none", "none"]}
-            color="red"
-            background="tranparent"
-            fontSize="40px"
-          /> */}
+          
+          {/* nav icon for mobile */}
           <Button
             ref={btnRef}
             onClick={onOpen}
@@ -177,6 +162,9 @@ const Navbar = () => {
             position="absolute"
             top="300px"
             right="0px"
+            _hover={{
+              bgColor:"transparent",
+           }}
           >
             <svg
               width="50"
